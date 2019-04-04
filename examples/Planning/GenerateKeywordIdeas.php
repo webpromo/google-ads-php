@@ -21,7 +21,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
-use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser as ArgumentParser; 
 use Google\Ads\GoogleAds\Lib\V1\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V1\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V1\GoogleAdsException;
@@ -39,20 +39,20 @@ use Google\Protobuf\StringValue;
 /** This example generates keyword ideas from a list of seed keywords or a seed page URL. */
 class GenerateKeywordIdeas
 {
-    const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    const CUSTOMER_ID = '4732320888';
     // Location criteria IDs. For example, specify 21167 for New York. For more information
     // on determining this value, see
     // https://developers.google.com/adwords/api/docs/appendix/geotargeting.
-    const LOCATION_ID_1 = 'INSERT_LOCATION_ID_1_HERE';
-    const LOCATION_ID_2 = 'INSERT_LOCATION_ID_2_HERE';
+    const LOCATION_ID_1 = '1026990';
+    const LOCATION_ID_2 = '1026980';
 
     // A language criterion ID. For example, specify 1000 for English. For more information
     // on determining this value, see
     // https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages.
-    const LANGUAGE_ID = 'INSERT_LANGUAGE_ID_HERE';
+    const LANGUAGE_ID = '1000';
 
-    const KEYWORD_TEXT_1 = 'INSERT_KEYWORD_TEXT_1_HERE';
-    const KEYWORD_TEXT_2 = 'INSERT_KEYWORD_TEXT_2_HERE';
+    const KEYWORD_TEXT_1 = 'economic damages';
+   const KEYWORD_TEXT_2 = 'Mickey Mouse';
 
     // Optional: Specify a URL string related to your business to generate ideas.
     const PAGE_URL = null;
@@ -88,7 +88,7 @@ class GenerateKeywordIdeas
                     [self::LOCATION_ID_1, self::LOCATION_ID_2],
                 $options[ArgumentNames::LANGUAGE_ID] ?: self::LANGUAGE_ID,
                 $options[ArgumentNames::KEYWORD_TEXT] ?:
-                    [self::KEYWORD_TEXT_1, self::KEYWORD_TEXT_2],
+                    [self::KEYWORD_TEXT_1], //, self::KEYWORD_TEXT_2],
                 $options[ArgumentNames::PAGE_URL] ?: self::PAGE_URL
             );
         } catch (GoogleAdsException $googleAdsException) {
