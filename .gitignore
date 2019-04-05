@@ -2,3 +2,6 @@
 vendor
 composer.lock
 adsapi_php.ini
+.env
+google_ads_php.ini
+examples/Authentication/google_ads_php.ini
