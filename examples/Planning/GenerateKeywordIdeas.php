@@ -52,7 +52,7 @@ class GenerateKeywordIdeas
     const LANGUAGE_ID = '1000';
 
     const KEYWORD_TEXT_1 = 'economic damages';
-   const KEYWORD_TEXT_2 = 'economic damage';
+   const KEYWORD_TEXT_2 = 'valuation';
 
     // Optional: Specify a URL string related to your business to generate ideas.
     const PAGE_URL = null;

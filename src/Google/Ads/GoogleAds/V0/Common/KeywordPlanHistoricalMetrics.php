@@ -66,7 +66,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
     public function setAvgMonthlySearches($var)
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Int64Value::class);
-        $this->avg_monthly_searches = $var;
+        $this->avg_monthly_searches = 2  // $var;
 
         return $this;
     }
